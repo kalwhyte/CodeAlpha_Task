@@ -25,15 +25,17 @@ A full-featured network packet sniffer built with **Python** and **Scapy**, desi
 
 ## Run the sniffer:
 
-    sudo python sniffer.py
+    sudo python capy.py
+        or
+    sudo scap/bin/python3 capy.py
 
 ## ➕ Optional: Filter by Protocol
 
 # Only capture TCP packets
-    sudo python sniffer.py --protocol TCP
+    sudo python capy.py --protocol TCP
 
 # Only capture UDP packets
-    sudo python sniffer.py --protocol UDP
+    sudo python capy.py --protocol UDP
 
 ## 📁 Output Files
     log.txt — Easy-to-read, timestamped packet summaries
@@ -53,14 +55,23 @@ A full-featured network packet sniffer built with **Python** and **Scapy**, desi
 
     [
     {
-        "timestamp": "2025-07-31 05:42:12",
-        "src_ip": "192.168.1.100",
-        "dst_ip": "8.8.8.8",
+        "timestamp": "2025-08-04 06:48:08",
+        "src_ip": "172.20.91.88",
+        "dst_ip": "172.20.80.1",
         "protocol": "UDP",
-        "src_port": 56789,
+        "src_port": 56912,
         "dst_port": 53,
-        "dns_query": "www.google.com."
-    }
+        "dns_query": "telemetry.individual.githubcopilot.com."
+    },
+    {
+        "timestamp": "2025-08-04 06:48:08",
+        "src_ip": "172.20.80.1",
+        "dst_ip": "172.20.91.88",
+        "protocol": "UDP",
+        "src_port": 53,
+        "dst_port": 56912,
+        "dns_query": "telemetry.individual.githubcopilot.com."
+    },
     ]
 
 ## 🔒 **License & Credits**
